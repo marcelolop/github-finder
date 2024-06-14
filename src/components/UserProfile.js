@@ -1,6 +1,5 @@
 // UserProfile.js
 import React from "react";
-import { FaStar, FaCodeBranch, FaCalendar } from "react-icons/fa";
 import { truncateText } from "../utils/utils";
 
 const UserProfile = ({ userData }) => (
@@ -22,7 +21,7 @@ const UserProfile = ({ userData }) => (
           @{userData.login}
         </a>
       </p>
-      <p className="bio">{userData.bio || "Account doesn't have a bio."}</p>
+      <p className="bio">{truncateText(userData.bio || "Account doesn't have a bio.", 100)}</p>
       <div className="stats">
         <p>
           <span className="statsLabel">Repositories:</span>{" "}
