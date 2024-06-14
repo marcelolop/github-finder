@@ -1,6 +1,6 @@
 // RepositoriesList.js
 import React from "react";
-import { FaStar, FaCodeBranch, FaCalendar } from "react-icons/fa";
+import { FaStar, FaCodeBranch, FaCalendar, FaBalanceScale } from "react-icons/fa";
 
 const RepositoriesList = ({
   userRepos,
@@ -46,6 +46,10 @@ const RepositoriesList = ({
             <span className="repoStat">
               <FaCalendar />
               {new Date(repo.created_at).toLocaleDateString()}
+            </span>
+            <span className="repoStat">
+            <FaBalanceScale />
+              {repo.license?.name || "No license"}
             </span>
           </div>
         </li>
