@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# GitHub Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+GitHub Finder is a React application designed to search for GitHub users and display their profile information and repositories.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [GitHub Finder](#github-finder)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Technologies Used](#technologies-used)
+  - [API Usage](#api-usage)
+  - [Deployment](#deployment)
+  - [Contributing](#contributing)
+  - [License](#license)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+GitHub Finder is a single-page application built using React.js that leverages the GitHub API to fetch and display user profiles and their repositories. It consists of two main pages/components: **Search** and **User**.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Search Page**: Allows users to input a GitHub username and submit a form to search for that user.
+- **User Page**: Displays detailed information about the GitHub user, including their avatar, bio, statistics (followers, following, public repositories), and a list of their repositories.
 
-### `npm test`
+The application utilizes React Router for navigation between the Search and User pages, axios for making HTTP requests to the GitHub API, and Framer Motion for smooth page transitions.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+- **Search Page**:
+  - Input field to enter a GitHub username.
+  - Form submission to search for the entered username.
+  - Error handling for non-existent users or failed API requests.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **User Page**:
+  - Detailed user profile including avatar, username, bio, statistics (followers, following, public repositories), and additional information (location, blog, company, etc.).
+  - List of repositories with details such as name, description, stars, forks, and last updated date.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Navigation and Transition**:
+  - Smooth transitions between pages using Framer Motion animations.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+To run the GitHub Finder application locally, follow these steps:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository:
+2. Install dependencies:
+3. Create a `.env` file in the root directory and add your GitHub personal access token:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Once installed, you can start the application:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Technologies Used
 
-## Learn More
+- React.js
+- React Router DOM
+- Axios
+- Framer Motion
+- CSS (with CSS Modules for scoped styling)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## API Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The GitHub API is utilized to fetch user profiles and repositories:
 
-### Code Splitting
+- **User endpoint**: `https://api.github.com/users/${user}`
+- **List of repos endpoint**: `https://api.github.com/users/${user}/repos`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Make sure to replace `${user}` with the actual GitHub username you want to fetch.
 
-### Analyzing the Bundle Size
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The application is deployed and hosted using Vercel. You can access the live version of the application [here](https://githubfinder-m-dev.vercel.app/).
 
-### Making a Progressive Web App
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contributions are welcome! Feel free to open issues and pull requests.
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

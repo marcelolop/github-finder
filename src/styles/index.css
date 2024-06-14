@@ -574,8 +574,8 @@ body {
 
 .backHomeButton {
   position: absolute;
-  top: 60px;
-  left: 60px;
+  top: 75px;
+  left: 75px;
   background-color: var(--boxes-background-color);
   color: var(--light-cyan-color);
   border: none;
