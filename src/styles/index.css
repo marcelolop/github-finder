@@ -525,7 +525,10 @@ body {
     background-color: #1f1f1fcc;
     cursor: pointer;
     box-shadow: var(--box-shadow-hover);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
+    transition: box-shadow 0.5s ease;
+    transition:  transform 0.8s ease;
+    transform: scale(1.01);
   }
 }
 
